@@ -48,7 +48,7 @@
 
 
     <script>
-    history.pushState("localhost:3000", null, './')
+    history.pushState(null, null, './')
 
       function login() {
           // NO NEED FOR PUSHSTATE HERE BECAUSE IT CALLS THE GETDASHBOARD() METHOD
@@ -69,7 +69,7 @@
       }
 
       function getDashboard() {
-        history.pushState("localhost:3000", null, './dashboard')   
+        history.pushState(null, null, './dashboard')   
         const token = localStorage.getItem("jwt");
         axios
           .get("/api/dashboard", {
@@ -86,7 +86,7 @@
       }
 
       function settings() {
-        history.pushState("localhost/3000", null, './settings')
+        history.pushState(null, null, './settings')
         const token = localStorage.getItem("jwt");
         axios
           .get("/api/settings", {
